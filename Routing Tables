@@ -1,0 +1,33 @@
+check: 
+
+route -n 
+ifconfig 
+ip route 
+
+delete route: 
+route del -host 10.9.15.100 
+route del -host 10.9.15.101 
+route del -host 239.255.150.200 
+route del -host 239.255.150.201 
+
+add route: 
+route add -host 10.9.15.100 gw 192.168.40.9 
+route add -host 10.9.15.101 gw 192.168.40.9 
+route add -host 239.255.150.200 gw 192.168.40.9 
+route add -host 239.255.150.201 gw 192.168.40.9 
+
+
+ 
+
+640  (11/03/23) 02:49:18 history | grep route 
+  641  (11/03/23) 02:49:24 route del -host 10.9.15.100 
+  642  (11/03/23) 02:49:28 route del -host 10.9.15.101 
+  643  (11/03/23) 02:49:32 route del -host 239.255.150.200 
+  644  (11/03/23) 02:49:36 route del -host 239.255.150.201 
+  645  (11/03/23) 02:49:46 route add -host 10.9.15.100 gw tun0 
+  646  (11/03/23) 02:49:55 route add -host 10.9.15.100 dev tun0 
+  647  (11/03/23) 02:50:00 route add -host 10.9.15.101 dev tun0 
+  648  (11/03/23) 02:50:06 route add -host 239.255.150.200 dev tun0 
+  649  (11/03/23) 02:50:09 route add -host 239.255.150.201 dev tun0 
+
+ 
