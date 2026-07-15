@@ -1,0 +1,46 @@
+SCP the Hardening.sh file 
+
+cd /etc/ssh/ 
+
+vi sshd_config -> AllowUsers root directfn 
+systemctl start chronyd.service 
+systemctl enable chronyd.service 
+ 
+=============================== 
+
+chmod 755 Hardening.sh 
+
+Then Run the Server Hardening Script 
+
+./Hardening.sh all 
+
+=============================== 
+After Reboot the Server 
+=============================== 
+
+timedatectl set-timezone 
+
+systemctl restart rsyslog.service 
+
+systemctl restart crond.service 
+
+chmod 644 /etc/sudoers 
+
+vim /etc/sudoers 
+
+directfn ALL=(ALL) NOPASSWD: ALL 
+
+
+usermod -aG wheel directfn 
+install: telnet, wget,curl,net-tools,bind-utils 
+
+
+systemctl restart sshd 
+
+systemctl stop firewalld.service 
+
+ 
+
+ 
+
+yum install curl bind-utils wget unzip net-tools telnet 
