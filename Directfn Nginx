@@ -1,0 +1,11 @@
+SOC eken host name eka illagena value ekak ekka RPM eka share karanawa. 
+*  thiyena nginx eka ain karanna svr eke 
+*  rpm eka linux ekata baala rpm -ivr gahuwama wada karan naththan, 
+*/usr/bin/rpmkeys --import /tmp/NGINX-Sign-Public-Key.pem meka gahala 
+
+NGINX_LICENSE_KEY=<eyala ewana key eka> rpm -ivh <nginx rpm eke nama> 
+
+eth nginx -v gahuwama liblmdb.so.0.0.0 error ekak enawanan eka dependancy ekak. dependancy check false karala soc eken ewanne. e lib eka soc eken illagena /etc/nginx/lib walata dala /usr/lib64/ ekata link ekak hadanna one. 
+
+cd /usr/lib64/ 
+ln -s /etc/nginx/libs/liblmdb.so.0.0.0 ./liblmdb.so.0.0.0 
