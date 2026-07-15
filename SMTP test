@@ -1,0 +1,23 @@
+Email server connectivity check from server 
+
+https://www.gmass.co/smtp-test 
+telnet <smtp_svr> <port> 
+Or 
+openssl s_client -connect smtp.gmail.com:465 
+
+
+EHLO appserver1 
+
+AUTH LOGIN 
+
+334 VXNlcm5hbWU6  --> bash64'get username:' 
+
+C3VwcG9ydEBhYWEtZXF1aXRpZXMuY29tLnBo   -->username 
+
+334 UGFzc3dvcmQ6   --> bash64'get password' 
+
+Zm1yenRtcnF3dmN5cGRwZw    --->passwrd 
+
+MAIL FROM:<support@aaa-equities.com.ph> SIZE=566 
+
+RCPT TO:<a.chamath@directfn.com> 
