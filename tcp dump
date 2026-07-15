@@ -1,0 +1,1 @@
+tcpdump -lnnv -i lo port 8080 -w 1.pcap 
