@@ -1,0 +1,83 @@
+falcon server--> falcon client--> bos--> jboss--> gateway--> dfix 
+
+  
+
+Falcon SVR= Watchdog 
+
+"/home/directfn/app/ntp_falcon/falcon_server/falcon-server.yml" 
+
+"/home/directfn/app/ntp_falcon/falcon_server/setup_env.sh" 
+
+  
+
+Falcon Client 
+
+"/home/directfn/app/ntp_falcon/falcon_client/falcon-client.yml" 
+
+"/home/directfn/app/ntp_falcon/falcon_client/setup_env.sh" 
+
+  
+
+Bos = Back Office = Aura=INQ 
+
+"/home/directfn/app/ntp_bos/setup_env.sh" 
+
+"/home/directfn/app/ntp_bos/config.yaml" 
+
+  
+
+JBOss = OMS 
+
+"/home/directfn/app/ntp_jboss/standalone/configuration/standalone-full.xml" 
+
+"/home/directfn/app/ntp_jboss/bin/setup_env.sh" 
+
+  
+
+Test 
+
+"/home/directfn/app/ntp_jboss/standalone/deployments/DFNNTP-MS_MA_1.000.16.2.ear.deployed" 
+
+  
+
+Gateway 
+
+"/home/directfn/app/ntp_gateway/config.yaml" 
+
+"/home/directfn/app/ntp_gateway/setup_env.sh" 
+
+  
+
+DFIX 
+
+"/home/directfn/app/ntp_dfix/config/settings.ini" 
+
+"/home/directfn/app/ntp_dfix/setup_env.sh" 
+
+Check connectivity 
+
+telnet localhost 9988 || 10000 
+
+  
+
+"/home/directfn/app/ntp_dfix/config/fix.cfg" 
+
+"/home/directfn/app/ntp_simulator/conf/simulator.ini" 
+
+  
+
+  
+
+NGINX [everything host here. AT] 
+
+"/etc/nginx/nginx.conf" 
+
+/etc/nginx/conf.d/ntpat.conf 
+
+"/etc/nginx/conf.d/proxy.conf" 
+
+  
+
+Test 
+
+nginx -t 
