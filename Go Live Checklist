@@ -1,0 +1,23 @@
+Time should be synced 
+
+Firewall disable 
+
+Firewall stop 
+
+All hostnames add to /etc/hosts 
+
+Check ssl nginx 
+
+Check upstream in nginx 
+
+Check crons 
+
+Check exchange connectivity , also AT routing data -  sendercomp, targetcomp 
+
+Log in to all applications.(at,dt,web,mob,tab,pro11,proxpert) 
+
+Remove all the values in t13 table 
+
+Gateway change the ideal session time out 
+
+ Gateway dealer list download time change 
